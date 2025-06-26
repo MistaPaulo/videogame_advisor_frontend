@@ -1,0 +1,125 @@
+:root {
+  --theme-bg: #121212;
+  --theme-surface: #1e1e1e;
+  --theme-on-surface: #e0e0e0;
+  --theme-accent: #ffc107;
+
+  /* Badges background colors */
+  --badge-genre-bg: #17a2b8;
+  --badge-store-bg: #ff6f61;
+  --badge-platform-bg: #6f42c1;
+  --badge-rating-bg: #ffca2c;
+}
+
+/* Global background and text */
+body,
+#root {
+  background-color: var(--theme-bg);
+  color: var(--theme-on-surface);
+}
+
+/* Main title: accent color and bold */
+header .display-4 {
+  color: var(--theme-accent);
+  font-weight: 700;
+}
+
+/* Subtitle always legible */
+header .lead {
+  color: var(--theme-on-surface) !important;
+}
+
+/* Dark input with hover/focus feedback */
+.theme-input {
+  background-color: var(--theme-surface);
+  color: var(--theme-on-surface);
+  border: 1px solid var(--theme-accent);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+}
+.theme-input:hover {
+  background-color: #2a2a2a;
+}
+.theme-input:focus {
+  background-color: #2a2a2a;
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* Input placeholder */
+.theme-input::placeholder {
+  color: rgba(224, 224, 224, 0.9) !important;
+}
+
+/* Cards and modals */
+.card,
+.modal-content {
+  background-color: var(--theme-surface) !important;
+  color: var(--theme-on-surface) !important;
+  border: 1px solid var(--theme-accent) !important;
+}
+
+/* Custom badges */
+
+/* Genre badges */
+.badge-genre {
+  background-color: var(--badge-genre-bg) !important;
+  color: #fff !important;
+}
+
+/* Store badges */
+.badge-store {
+  background-color: var(--badge-store-bg) !important;
+  color: #fff !important;
+}
+
+/* Platform badges */
+.badge-platform {
+  background-color: var(--badge-platform-bg) !important;
+  color: #fff !important;
+}
+
+/* Rating badge */
+.badge-rating {
+  background-color: var(--badge-rating-bg) !important;
+  color: #000 !important;
+}
+
+/* Metacritic badges (success, warning, danger) */
+.badge.bg-success,
+.badge.bg-warning,
+.badge.bg-danger {
+  color: #000 !important;
+}
+
+/* Modal close button: */
+.btn-close {
+  filter: invert(100%) brightness(80%);
+  opacity: 0.8;
+}
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Unselected carousel dots */
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(224, 224, 224, 0.3) !important;
+}
+/* Active carousel dot */
+.carousel-indicators .active {
+  background-color: rgba(224, 224, 224, 0.8) !important;
+}
+
+/* Carousel arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(75%) grayscale(100%);
+}
+
+/* Override .text-muted for contrast */
+.text-muted {
+  color: var(--theme-on-surface) !important;
+}

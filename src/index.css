@@ -44,14 +44,16 @@ header .lead {
   background-color: #2a2a2a;
   border-color: var(--theme-accent);
   box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  /* keep text color the same when focused */
+  color: var(--theme-on-surface) !important;
 }
 
-/* Input placeholder */
+/* Contrasted input placeholder */
 .theme-input::placeholder {
   color: rgba(224, 224, 224, 0.9) !important;
 }
 
-/* Cards and modals */
+/* Cards and modals on dark surface */
 .card,
 .modal-content {
   background-color: var(--theme-surface) !important;
@@ -92,7 +94,7 @@ header .lead {
   color: #000 !important;
 }
 
-/* Modal close button: */
+/* Modal close button */
 .btn-close {
   filter: invert(100%) brightness(80%);
   opacity: 0.8;
@@ -101,14 +103,15 @@ header .lead {
   opacity: 1;
 }
 
-/* Unselected carousel dots */
+/* Carousel indicators (dots) */
+/* unselected */
 .carousel-indicators button {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: rgba(224, 224, 224, 0.3) !important;
 }
-/* Active carousel dot */
+/* selected */
 .carousel-indicators .active {
   background-color: rgba(224, 224, 224, 0.8) !important;
 }
